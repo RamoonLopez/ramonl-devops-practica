@@ -1,7 +1,13 @@
+import sys
+import os
 from datetime import datetime
-from Usuario import Usuario, Cliente, Administrador  
-from Producto import Producto                         
-from Pedido import Pedido                             
+
+# Añadir directorio Models al path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from Models.Usuario import Usuario, Cliente, Administrador  
+from Models.Producto import Producto                         
+from Models.Pedido import Pedido                             
 
 
 

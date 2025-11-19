@@ -1,8 +1,19 @@
 # main.py
 
+import sys
+import os
+
+# Añadir directorios al path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from Models.Usuario import Cliente, Administrador
+from Models.Producto import Producto, ProductoElectronico, ProductoRopa
+from Models.Pedido import Pedido
+
+# Importar TiendaService
+tienda_path = os.path.join(os.path.dirname(__file__), '..', 'Tienda Service')
+sys.path.insert(0, tienda_path)
 from Tienda_service import TiendaService
-from Usuario import Cliente, Administrador
-from Producto import Producto, ProductoElectronico, ProductoRopa
 
 
 tienda = TiendaService()
